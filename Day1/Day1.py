@@ -14,7 +14,7 @@ def slidingWindowScan(data):
     return count
 
 if __name__ == '__main__':
-    data = [int(x) for x in open('../Day1Challenge1','r')]
+    data = [int(x) for x in open('Day1Challenge1','r')]
     
     # Challenge 1 function
     print(sonarscan(data))
