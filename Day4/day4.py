@@ -56,7 +56,7 @@ def bingoLoser(pulls,boards):
 
 
 if __name__ == '__main__':
-    data = [x[:-1] for x in open("testing","r")] 
+    data = [x[:-1] for x in open("inputDay4.txt","r")] 
     bingoPulls = [int(x) for x in data[0].split(",")]
     gameBoards = buildBoards(data[2:])
     
