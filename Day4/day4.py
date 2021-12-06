@@ -41,7 +41,7 @@ def bingoWinner(pulls,boards):
             boards[x] = blotter(boards[x], ball)
             if isWinner(boards[x]) > 0:
                 return isWinner(boards[x])*ball
-    return board
+    return boards
 
 def bingoLoser(pulls,boards):
     remaining = [int(x) for x in range(0,len(boards))]
