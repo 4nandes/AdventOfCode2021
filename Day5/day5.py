@@ -46,6 +46,8 @@ def iterateCoords(coords, board):
 
 if __name__ == '__main__':
     data = [x[:-1] for x in open("inputDay5.txt","r")] 
-    board = [[0 for x in range(0,1000)] for x in range(0,1000)]
+    board = [[0 for x in range(0,1500)] for x in range(0,1000)]
     board = iterateCoords(data,board)
+    # for x in board:
+    #     print("".join(["." if y == 0 else str(y) for y in x]))
     print(tallyUp(board))
