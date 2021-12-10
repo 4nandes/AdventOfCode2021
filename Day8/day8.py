@@ -42,7 +42,6 @@ def decodeSum(code,pin):
     return int(newPin)
 
 if __name__ == '__main__':
-
     data = [[x[:-1].split("|")[0].split(" ")[:-1],x[:-1].split("|")[1].split(" ")[1:]] for x in open('inputDay8','r')]
     
     # Part One
@@ -50,6 +49,3 @@ if __name__ == '__main__':
     
     #Part Two
     print(sum([decodeSum(what[0],what[1]) for what in [[y for y in x] for x in data]]))
-    
-    
-    
