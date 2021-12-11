@@ -13,7 +13,7 @@ def diagonalMarks(board,y, start, end, upDown):
             y += 1
         else:
             y = y -1
-    return board
+    return
 
 def markBoard(board, xOry, start, end, horVert):
     if start > end:
@@ -23,7 +23,7 @@ def markBoard(board, xOry, start, end, horVert):
             board[x][xOry] += 1
         else:
             board[xOry][x] += 1
-    return board
+    return
 
 def iterateCoords(coords, board):
     for coord in coords:
@@ -33,14 +33,14 @@ def iterateCoords(coords, board):
         if start[0] > end[0]:
             start, end = end, start
         if (start[0] == end[0]):
-            board = markBoard(board, start[0], start[1], end[1], 0)
+            markBoard(board, start[0], start[1], end[1], 0)
         elif (start[1] == end[1]):
-            board = markBoard(board, start[1], start[0], end[0], 1)
+            markBoard(board, start[1], start[0], end[0], 1)
         else:
             if start[1] < end[1]:
-                board = diagonalMarks(board, start[1], start[0], end[0], 0)
+                diagonalMarks(board, start[1], start[0], end[0], 0)
             else:
-                board = diagonalMarks(board, start[1], start[0], end[0], 1)
+                diagonalMarks(board, start[1], start[0], end[0], 1)
     return board
 
 
@@ -48,6 +48,4 @@ if __name__ == '__main__':
     data = [x[:-1] for x in open("inputDay5.txt","r")] 
     board = [[0 for x in range(0,1500)] for x in range(0,1000)]
     board = iterateCoords(data,board)
-    # for x in board:
-    #     print("".join(["." if y == 0 else str(y) for y in x]))
     print(tallyUp(board))
