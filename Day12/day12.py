@@ -13,18 +13,18 @@ def twoHopsThisTime(start,map,journey,victories,littleGuy):
         else:
             if (x not in journey or x.isupper()) and x != "start":
                 twoHopsThisTime(x,map,journey,victories,littleGuy)
-    pass
+    return
 
 def explore(start,map,journey,victories):
     journey = deepcopy(journey)
     journey.append(start)
     if start == "end":
         victories.append(journey)
-        pass
+        return
     for x in map[start]:
         if x not in journey or x.isupper():
             explore(x,map,journey,victories)
-    pass
+    return
 
 def mapMaker(edges):
     map = {}
