@@ -1,20 +1,5 @@
 from copy import deepcopy
 
-# def partOneAnswer(buckets):
-#     letters = {}
-#     print(buckets)
-#     for bucket in buckets:
-#         if bucket[:1] in letters:
-#             letters[bucket[:1]] += buckets[bucket]
-#         else:
-#             letters[bucket[:1]] = buckets[bucket]
-#         # if bucket[1:] in letters:
-#         #     letters[bucket[1:]] += buckets[bucket]
-#         # else:
-#         #     letters[bucket[1:]] = buckets[bucket]
-#     
-#     # print(letters[len(letters)-1]-letters[0])
-
 def polymerEngine(buckets,bucketMap,blankBuckets,clockStopTime,letters):
     clock = 0
     while clock != clockStopTime:
